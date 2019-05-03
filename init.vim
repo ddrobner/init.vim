@@ -38,7 +38,7 @@ Plug 'ObserverOfTime/ncm2-jc2'
 Plug 'ncm2/ncm2-path'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-scripts/ClosePairs'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+Plug 'shime/vim-livedown'
 call plug#end()
 
 " air-line
@@ -74,8 +74,17 @@ call plug#end()
 color monokai
 let g:airline_theme='minimalist'
 map <C-n> :NERDTreeTabsToggle<CR>
-let g:python_host_prog='/usr/bin/python2.7'
-let g:python3_host_prog='/usr/bin/python'
+map <C-l> :LivedownPreview<CR>
+map <C-k> :LivedownKill<CR>
+
+if has("unix")
+	let g:python_host_prog='/usr/bin/python2.7'
+	let g:python3_host_prog='/usr/bin/python'
+elseif has("win32")
+	let g:python_host_prog='C:\Python27\python.exe'
+	let g:python3_host_prog='C:\Users\David\AppData\Local\Programs\Python\Python37/python.exe'
+endif
+
 set fileformat=unix
 set fileformats=unix,dos
 autocmd BufEnter * call ncm2#enable_for_buffer()
