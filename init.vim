@@ -74,8 +74,8 @@ call plug#end()
 color monokai
 let g:airline_theme='minimalist'
 map <C-n> :NERDTreeTabsToggle<CR>
-let g:python_host_prog='C:\Python27\python.exe'
-let g:python3_host_prog='C:\Users\David\AppData\Local\Programs\Python\Python37/python.exe'
+let g:python_host_prog='/usr/bin/python2.7'
+let g:python3_host_prog='/usr/bin/python'
 set fileformat=unix
 set fileformats=unix,dos
 autocmd BufEnter * call ncm2#enable_for_buffer()
