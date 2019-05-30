@@ -89,6 +89,7 @@ endif
 set fileformat=unix
 set fileformats=unix,dos
 autocmd BufEnter * call ncm2#enable_for_buffer()
+autocmd BufEnter *.md setlocal spell spelllang=en_us
 set completeopt=noinsert,menuone,noselect
-autocmd FileType md call ncm2#disable_for_buffer()
+autocmd FileType markdown call ncm2#disable_for_buffer()
 let g:markdown_enable_spell_checking = 0
