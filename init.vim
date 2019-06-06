@@ -31,7 +31,7 @@ Plug 'w0rp/ale', { 'for': 'python' }
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+Plug 'roxma/nvim-yarp', {'for': 'python'}
 Plug 'ncm2/ncm2-jedi', { 'for': 'python' }
 Plug 'ncm2/ncm2-pyclang', { 'for': 'python'}
 Plug 'ObserverOfTime/ncm2-jc2'
